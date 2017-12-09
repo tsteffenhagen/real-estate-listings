@@ -1,3 +1,39 @@
-<h1>LISTINGS</h1>
+<div class="container">
+    <div class="jumbotron text-center">
+        <h1 class="display-3">Homes for Sale</h1>
+    </div>
 
-{{1 + 1}}
+    <h2>Add new home listing</h2>
+
+    <input type="number" class="form-control" placeholder="Cost" ng-model="vm.newListing.cost">
+    <br>
+    <input type="number" class="form-control" placeholder="Square Footage" ng-model="vm.newListing.sqft">
+    <br>
+    <input type="text" class="form-control" placeholder="city" ng-model="vm.newListing.city">
+    <br>
+    <button class="btn btn-default" ng-click="vm.addNewListing(vm.newListing)">Add new Home Listing</button>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Cost</th>
+                <th>Square Footage</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="house in vm.listing.list">
+                <td>
+                    {{house.cost}}
+                </td>
+                <td>
+                    {{house.sqft}}
+                </td>
+                <td>
+                    {{house.city}}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>

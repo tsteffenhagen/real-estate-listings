@@ -9,4 +9,4 @@ var rentingSchema = new Schema({
     city: { type: String }
 });
 
-module.exports = mongoose.model('Renting', rentingSchema);
+module.exports = mongoose.model('Rentals', rentingSchema);

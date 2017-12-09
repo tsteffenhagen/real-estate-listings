@@ -1,0 +1,39 @@
+<div class="container">
+        <div class="jumbotron text-center">
+            <h1 class="display-3">Units for Rent</h1>
+        </div>
+    
+        <h2>Add new rental unit</h2>
+    
+        <input type="number" class="form-control" placeholder="Rent" ng-model="vm.newRental.rent">
+        <br>
+        <input type="number" class="form-control" placeholder="Square Footage" ng-model="vm.newRental.sqft">
+        <br>
+        <input type="text" class="form-control" placeholder="city" ng-model="vm.newRental.city">
+        <br>
+        <button class="btn btn-default" ng-click="vm.addNewRental(vm.newRental)">Add new Rental Unit</button>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Rent</th>
+                    <th>Square Footage</th>
+                    <th>City</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="rentalUnit in vm.rental.list">
+                    <td>
+                        {{rentalUnit.rent}}
+                    </td>
+                    <td>
+                        {{rentalUnit.sqft}}
+                    </td>
+                    <td>
+                        {{rentalUnit.city}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    
+    </div>
