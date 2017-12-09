@@ -4,14 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Real </title>
     <link rel="stylesheet" href="vendors/bootstrap.css">
     <link rel="stylesheet" href="styles/style.css">
     <script src="vendors/angular.js"></script>
     <script src="vendors/angular-route.js"></script>
     <script src="scripts/client.js"></script>
+
+    <!-- CONTROLLERS -->
+    <script src="scripts/controllers/listing.controller.js"></script>
+    <script src="scripts/controllers/rental.controller.js"></script>
+
+    <!-- SERVICES -->
+    <script src="scripts/services/listing.service.js"></script>
+    <script src="scripts/services/listing.service.js"></script>
+
 </head>
-<body>
+<body ng-app="RealEstateApp">
+        <nav class="navbar navbar-light bg-light">
+            <span class="navbar-text">
+                <a class="navbar-brand" href="#!listing">Home Listings</a>
+                <a class="navbar-brand" href="#!rental">Rental Units</a>
+            </span>
+        </nav>
+
+    <ng-view></ng-view>
     
 </body>
 </html>
